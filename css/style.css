@@ -1,30 +1,81 @@
 .playlist--list {
-  list-style: none;
-  margin: 20px 0 0 0;
-  padding: 0;
-  font-family: Avenir, "Avenir Next", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 0.95;
-  color: #565D64;
+	list-style: none;
+	margin: 20px 0 0 0;
+	padding: 0;
+	font-family: Avenir, "Avenir Next", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: .95;
+	color: #565D64;
 }
 .playlist--list li {
-  margin: 0;
-  padding: 0;
-  cursor: pointer;
-  padding: 15px 10px;
-  background: #ffffff;
-  border: 1px solid #dbe3e8;
-  border-top: none;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+		margin: 0;
+		padding: 0;
+		padding: 15px 10px;
+		background: #ffffff;
+		border: 1px solid #dbe3e8;
+		border-top: none;
+    display:flex;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+} 
+
+.track-info{width:60%;}
+.track-info a{
+		cursor: pointer;
+    font-size:16px;
+    font-weight:bold;
 }
+.playlist--list li span{display:block;}
+.playlist--list .download{float:right;}
+.playlist--list .play-track{float:right;font-size:16px;}
 .playlist--list li:first-child {
-  border-top: 1px solid #dbe3e8;
-}
-.playlist--list li:hover {
-  background-color: #3498db;
-  color: #ffffff;
-}
+			border-top: 1px solid #dbe3e8;
+		}
+		&:hover {
+			background-color: #3498db;
+			color: #ffffff;
+		}
 .playlist--list li.active {
-  background-color: #CCDADE;
-  color: #565D64;
+			background-color: #CCDADE;
+			color: #565D64;
+		}
+
+/* Customizations */
+.plyr__progress:first-child, .plyr__controls .plyr__time:first-child, .plyr__controls > button:first-child {
+    padding: 15px;
+    background: #29cf54;
+    border-radius:100%;
+  
+}
+.plyr--playing .plyr__controls [data-plyr="pause"] {
+    display: inline-block;
+    padding: 15px;
+    background: #ffb00e;
+        border-radius:100%;
+
+}
+.plyr--playing .plyr__controls [data-plyr="pause"] svg{
+  width: 22px;
+    height: 22px;
+    display: block;
+    fill: #fff;
+}
+.plyr__progress:first-child, .plyr__controls .plyr__time:first-child, .plyr__controls > button:first-child:hover {
+    color: rgb(255, 255, 255);
+    background: #F2F2F2;
+}
+
+.plyr__progress:first-child, .plyr__controls .plyr__time:first-child, .plyr__controls > button:first-child svg {
+    width: 22px;
+    height: 22px;
+    display: block;
+    fill: #fff;
+}
+
+progress.plyr__progress--played {
+    color: #47cf73;
+}
+
+.plyr--audio .plyr__controls button.tab-focus:focus, .plyr--audio .plyr__controls button:hover, .plyr__play-large {
+    color: rgb(255, 255, 255);
+    background: rgb(52, 152, 219);
 }

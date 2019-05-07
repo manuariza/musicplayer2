@@ -2,7 +2,7 @@ plyr.setup(document.querySelector('.plyr'));
 var radio = document.querySelector('.plyr').plyr;
 
 var player = document.querySelector('.playlist');
-var songs = player.querySelectorAll('.playlist--list li');
+var songs = player.querySelectorAll('.play-track');
 var i;
 var active = null;
 
