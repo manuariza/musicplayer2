@@ -1,0 +1,30 @@
+.playlist--list {
+	list-style: none;
+	margin: 20px 0 0 0;
+	padding: 0;
+	font-family: Avenir, "Avenir Next", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: .95;
+	color: #565D64;
+	li {
+		margin: 0;
+		padding: 0;
+		cursor: pointer;
+		padding: 15px 10px;
+		background: #ffffff;
+		border: 1px solid #dbe3e8;
+		border-top: none;
+		box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+		&:first-child {
+			border-top: 1px solid #dbe3e8;
+		}
+		&:hover {
+			background-color: #3498db;
+			color: #ffffff;
+		}
+		&.active {
+			background-color: #CCDADE;
+			color: #565D64;
+		}
+	}
+}
